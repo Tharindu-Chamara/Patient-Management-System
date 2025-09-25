@@ -37,7 +37,7 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     @NotNull(message = "Register Date is required")
-    private LocalDate registerData;
+    private LocalDate registerDate;
 
 
 }
