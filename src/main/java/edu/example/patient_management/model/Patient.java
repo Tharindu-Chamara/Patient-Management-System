@@ -1,5 +1,6 @@
 package edu.example.patient_management.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.UUID;
+
 
 @Entity
 @Data
@@ -21,7 +22,7 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Integer id;
 
     @NotNull(message = "Name is required")
     private String name;
@@ -38,6 +39,7 @@ public class Patient {
 
     @NotNull(message = "Register Date is required")
     private LocalDate registerDate;
+
 
 
 }

@@ -10,7 +10,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class PatientResponseDTO {
 
-    private UUID id;
+    private Integer id;
     private String name;
     private String email;
     private String address;

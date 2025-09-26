@@ -21,4 +21,14 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(errors);
     }
+
+    @ExceptionHandler(EmailAlreadyExistsException.class)
+    public ResponseEntity<String> handleEmailAlreadyExistsException(EmailAlreadyExistsException ex){
+       return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PatientNotFoundException.class)
+    public ResponseEntity<String> handlePatientNotFoundException(PatientNotFoundException ex){
+      return   ResponseEntity.badRequest().body(ex.getMessage());
+    }
 }
